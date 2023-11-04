@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Styles from "./popup.module.css";
 const Popup = () => {
 
   return (
-    <div style={{height:"80px",width:"150px", backgroundColor:"red"}}>
-        Pop
+    <div className={Styles.popup}>
+
     </div>
   )
 }

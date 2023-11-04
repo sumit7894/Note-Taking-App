@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
-import Sidebar from '../Components/Sidebar';
-import NotesWindow from '../Components/NotesWindow';
-import Popup from '../Components/Popup';
+import Sidebar from '../Components/Sidebar/Sidebar';
+import NotesWindow from '../Components/NotesWindow/NotesWindow';
+import Popup from '../Components/Popup/Popup';
+import Overlay from '../Components/Overlay/Overlay';
 
 const Homepage = () => {
+  const [displayPopup,setDisplayPopup] = useState(false);
+  const [selected,setSelected] = useState(-1);
   const [list,setList] = useState([
     {
       id:"1",
@@ -22,10 +25,14 @@ const Homepage = () => {
   ]);
   return (
     <div>
-     <div style={{display:"flex"}}>
-     <Sidebar list={list} setList={setList}/>
-     <NotesWindow/>
+     <div style={{display:"flex",position:"relative"}}>
+     <Sidebar list={list} setList={setList} setDisplayPopup={setDisplayPopup}
+     selected={selected} setSelected={setSelected}
+     />
+     <NotesWindow setDisplayPopup={setDisplayPopup}/>
      </div>
+     {displayPopup&&(<Overlay setDisplayPopup={setDisplayPopup}/>)}
+     {displayPopup&&(<Popup/>)}
     </div>
   )
 }

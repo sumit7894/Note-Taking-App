@@ -1,0 +1,26 @@
+.listContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 12%;
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+    font-family: "Roboto";
+    margin-bottom: 1%;
+    z-index: 0;
+}
+.listContainer:hover{
+    cursor: pointer;
+}
+.noteIcon{
+    height: 9vh;
+    width: 4.5vw;
+    border-radius: 50%;
+    margin-left: 12%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
