@@ -1,0 +1,19 @@
+.note{
+    display: flex;
+    width: 90%;
+    /* border: 1px solid black; */
+    margin-top: 5%;
+    font-size: 1.3rem;
+    font-weight: 530;
+    white-space: pre-wrap;
+}
+.date_and_time{
+    width: 20%;
+    /* border-right: 1px solid black; */
+    padding: 4px;
+}
+.content{
+    width: 80%;
+    white-space: pre-wrap;
+    height: 10%;
+}

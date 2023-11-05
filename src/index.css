@@ -4,12 +4,3 @@
     margin: 0;
     padding :0;
 }
-.heading{
-    font-family: "Roboto";
-    margin: 100px;
-    background-color: red;
-}
-.button{
-    background-color: black;
-    height: 2rem;
-}
