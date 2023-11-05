@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Styles from "./noteswindow.module.css"
 import ButtonImage from "../../Utils/assests/text-area-button.svg"
 import NoteList from './NoteList'
 const NotesWindow = ({list,setList,selected}) => {
   const [newContent, setNewContent] = useState();
+  const buttonRef = useRef(null);
   const getCurrentDate =()=>{
     const getDate = new Date();
     const options = {
@@ -25,7 +26,12 @@ const NotesWindow = ({list,setList,selected}) => {
     const formattedTime = currentTime.replace(/am|pm/gi, match => match.toUpperCase());
     return formattedTime;
   }  
-  
+  const handleKeyDown=(e)=>{
+    if(e.key ==='Enter'){
+      e.preventDefault();
+      buttonRef.current.click();
+    }
+  }
   var selectedNote = "";
   if (selected > -1) {
     selectedNote = list.filter((item) => item.id == selected);
@@ -46,6 +52,7 @@ const NotesWindow = ({list,setList,selected}) => {
       listItem.notes = [...listItem.notes,newNote];
       const updatedList = [...list];
       setList(updatedList);
+      localStorage.setItem("pocket_notes",JSON.stringify(updatedList));
       setNewContent("");
     }
   }
@@ -61,17 +68,20 @@ const NotesWindow = ({list,setList,selected}) => {
         </div>
         <div className={Styles.notes_date_time_content}>
           {selected > -1 ? 
-          selectedNote.map((item)=><NoteList list={list} item={item}/>) : ""}
+          selectedNote.map((item)=><NoteList list={list} item={item} key={item.id}/>) : ""}
         </div>
         <div className={Styles.text_area_container}>
           <textarea className={Styles.text_area} 
           placeholder='Enter your text here...........'
           value={newContent}
           onChange={(e)=>setNewContent(e.target.value)}
+          onKeyDown={handleKeyDown}
           />
           <div className={Styles.text_area_button_img}>
           <img src={ButtonImage} className={Styles.text_area_button_img} 
-          alt='Enter-Button' onClick={handleClick}/>
+          alt='Enter-Button' onClick={handleClick}
+          ref={buttonRef}
+          />
           </div>
         </div>
     </div>

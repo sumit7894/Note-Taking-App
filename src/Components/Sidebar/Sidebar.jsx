@@ -13,7 +13,7 @@ const Sidebar = ({list,setList,selected,setSelected,setDisplayPopup}) => {
         </button>
         </div>
         {list.map((item,idx)=>
-        <NoteGroups selected={selected} setSelected={setSelected} item={item} idx={idx}/> 
+        <NoteGroups selected={selected} setSelected={setSelected} item={item} idx={idx} key={idx}/> 
         )}
     </div>
   )

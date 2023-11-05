@@ -6,7 +6,8 @@ const Popup = ({list,setList,setDisplayPopup}) => {
     const [selected,setSelected] = useState(-1);
     const [groupName,setGroupName] = useState("");
     const handleClick = ()=>{
-      const lastNoteId = list[list.length - 1];
+      console.log("list len ",list.length);
+      const lastNoteId = list.length-1;
       const groupAbreviation = groupName.split(' ').map(word => word[0].toUpperCase()).join('');
       const newGroup = {
         id: lastNoteId + 1,
@@ -15,9 +16,13 @@ const Popup = ({list,setList,setDisplayPopup}) => {
         abbreviation: groupAbreviation,
         notes: []
       };
-      setList((prevGroups)=>[...prevGroups,newGroup]);
+      const updatedList = [...list,newGroup];
+      setList(updatedList);
+      localStorage.setItem("pocket_notes",JSON.stringify(updatedList));
+      // setList((prevGroups)=>[...prevGroups,newGroup]);
       setGroupName("");
       setDisplayPopup(false);
+      // localStorage.setItem("notesData",JSON.stringify(list));
     }
   return (
     <div className={Styles.popup}>
