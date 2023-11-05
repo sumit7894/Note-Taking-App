@@ -62,3 +62,8 @@ right: 2rem;
 .text_area_button_img:hover{
     cursor: pointer;
 }
+@media (max-width: 767px) {
+    .window {
+      display: none;
+    }
+  }
