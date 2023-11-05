@@ -3,26 +3,26 @@ import Styles from "./popup.module.css";
 import { COLOR_CHOICES } from '../../Utils/constants';
 import { useState } from 'react';
 const Popup = ({list,setList,setDisplayPopup}) => { 
-    const [selected,setSelected] = useState(-1);
+    const [selectedColor,setSelectedColor] = useState(-1);
     const [groupName,setGroupName] = useState("");
     const handleClick = ()=>{
-      console.log("list len ",list.length);
+      if(selectedColor === -1 || groupName === ""){
+        return;
+      }
       const lastNoteId = list.length-1;
       const groupAbreviation = groupName.split(' ').map(word => word[0].toUpperCase()).join('');
       const newGroup = {
         id: lastNoteId + 1,
         title: groupName,
-        color: COLOR_CHOICES[selected].color,
+        color: COLOR_CHOICES[selectedColor].color,
         abbreviation: groupAbreviation,
         notes: []
       };
       const updatedList = [...list,newGroup];
       setList(updatedList);
       localStorage.setItem("pocket_notes",JSON.stringify(updatedList));
-      // setList((prevGroups)=>[...prevGroups,newGroup]);
       setGroupName("");
       setDisplayPopup(false);
-      // localStorage.setItem("notesData",JSON.stringify(list));
     }
   return (
     <div className={Styles.popup}>
@@ -38,8 +38,8 @@ const Popup = ({list,setList,setDisplayPopup}) => {
         {COLOR_CHOICES.map((item,idx)=>
         <div className={Styles.colorDiv} 
         style={{backgroundColor:item.color,
-        border: selected === idx ? "4px solid black":"4px solid"+item.color}}
-        key={idx} onClick={()=>setSelected(idx)}/>
+        border: selectedColor === idx ? "4px solid black":"4px solid"+item.color}}
+        key={idx} onClick={()=>setSelectedColor(idx)}/>
         )}
       </div>
       <button className={Styles.createBtn} onClick={handleClick}>

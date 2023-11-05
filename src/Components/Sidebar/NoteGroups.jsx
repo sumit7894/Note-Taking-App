@@ -9,9 +9,7 @@ const NoteGroups = ({selected,setSelected,item,idx}) => {
   style=
   {{backgroundColor: idx === selected ? "#F7ECDC" : ""}}>
 
-  <div style=
-  {{backgroundColor:item.color}}
-  className={Styles.noteIcon}>
+  <div style={{backgroundColor:item.color}} className={Styles.noteIcon}>
     {item.abbreviation}
     </div>
   <div style={{}}><h2>{item.title}</h2></div>

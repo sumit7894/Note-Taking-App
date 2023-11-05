@@ -1,0 +1,35 @@
+.window{
+    background-color: #F7ECDC;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+}
+.window img{
+    height: 42%;
+}
+.heading{
+    font-size: 3.4rem;
+}
+.sub_heading{
+    width: 52%;
+    white-space: no-wrap;
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+.footer_heading{
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+    font-size: 1.3rem;
+}
+.footer_heading img{
+    height: 2rem;
+    margin-right: 10px;
+}
