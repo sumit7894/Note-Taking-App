@@ -1,0 +1,59 @@
+.window{
+    background-color: #F7ECDC;
+    width: 75%;
+    height: 96vh;
+    border-bottom-left-radius: 14px;
+}
+.titlebar{
+    width: 100%;
+    background-color: #E8E8E8;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+.icon{
+    display: flex;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+}
+.groupName{
+    margin-left: 2%;
+    font-size: 2rem;
+}
+.textareaContainer{
+    background-color: #E8E8E8;
+    height: 30%;
+    position: fixed;
+    bottom: 4%;
+    width: 75%;
+    border-bottom-left-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+textarea{
+    height: 65%;
+    width: 90%;
+    border-radius: 9px;
+    color: #CCCCCC;
+    font-family: "Roboto";
+    padding: 15px;
+    font-size: 1.5rem;
+    border: none;
+}
+.clickButton{
+    position: absolute;
+    right: 5%;
+    bottom: 16%;
+}
+.clickButton:hover{
+    cursor: pointer;
+}

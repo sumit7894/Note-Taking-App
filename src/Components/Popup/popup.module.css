@@ -1,9 +1,63 @@
 .popup{
-    height: 30%;
-    width: 40%;
+    height: 40%;
+    width: 45%;
     background-color: white;
     position: absolute;
-    top: 35%;
-    left: 30%;
+    top: 30%;
+    left: 27%;
     z-index: 10;
+    font-family: "Roboto";
+}
+.heading{
+    margin-left: 5%;
+}
+.subHeading{
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-right: 4%;
+}
+.name{
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4%;
+}
+input{
+    height: 0.8rem;
+    font-size: 1.3rem;
+    border-radius: 22px;
+    padding: 12px;
+    border: solid 3px #CCCCCC;
+}
+input::placeholder{
+    color:#CCCCCC;
+}
+.choices{
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+.colorDiv{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-left: 1%;
+}
+.colorDiv:hover{
+    cursor: pointer;
+}
+.createBtn{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: black;
+    color: white;
+    font-family: "Roboto";
+    border-radius: 11px;
+    font-size: 1.25rem;
+}
+.createBtn:hover{
+    cursor: pointer;
 }
