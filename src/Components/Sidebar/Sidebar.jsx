@@ -1,7 +1,7 @@
 import React from 'react'
 import Styles from './sidebar.module.css';
 import NoteGroups from './NoteGroups';
-const Sidebar = ({list,setList,selected,setSelected,setDisplayPopup}) => {
+const Sidebar = ({list,setList,selected,setSelected,setDisplayPopup,isMobileView,setShowSideBar}) => {
   return (
     <div className={Styles.sidebar}>
       <div className={Styles.heading}>
@@ -13,7 +13,9 @@ const Sidebar = ({list,setList,selected,setSelected,setDisplayPopup}) => {
         </button>
         </div>
         {list.map((item,idx)=>
-        <NoteGroups selected={selected} setSelected={setSelected} item={item} idx={idx} key={idx}/> 
+        <NoteGroups selected={selected} setSelected={setSelected} item={item} idx={idx} key={idx}
+        isMobileView={isMobileView} setShowSideBar={setShowSideBar}
+        /> 
         )}
     </div>
   )

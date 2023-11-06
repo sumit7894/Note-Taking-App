@@ -1,7 +1,6 @@
 .note{
     display: flex;
     width: 90%;
-    /* border: 1px solid black; */
     margin-top: 5%;
     font-size: 1.3rem;
     font-weight: 530;
@@ -9,7 +8,6 @@
 }
 .date_and_time{
     width: 20%;
-    /* border-right: 1px solid black; */
     padding: 4px;
 }
 .content{
@@ -17,3 +15,8 @@
     white-space: pre-wrap;
     
 }
+@media (max-width: 767px) {
+    .date_and_time {
+      width: 50%;
+    }
+  }
