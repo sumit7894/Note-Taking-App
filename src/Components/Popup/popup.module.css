@@ -63,6 +63,18 @@ input::placeholder{
 }
 @media (max-width: 767px) {
     .popup {
-      
+        width: 90%;
+        left: 5%;
+        font-size: 1rem;
+        height: 30%;
+    }
+    input{
+        width: 40%;
+    }
+    .choices{
+        margin-left: 5%;
+    }
+    .name{
+        margin-left: 5%;
     }
   }

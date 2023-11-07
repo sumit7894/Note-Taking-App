@@ -5,7 +5,7 @@
 }
 .title_bar{
     background-color: #E8E8E8;
-    height: 12vh;
+    height: 6rem;
     display: flex;
     align-items: center;
 }
