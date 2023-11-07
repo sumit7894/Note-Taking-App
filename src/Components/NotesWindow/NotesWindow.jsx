@@ -86,12 +86,10 @@ const NotesWindow = ({list,setList,setSelected,selected,setShowSideBar,setShowWi
           onChange={(e)=>setNewContent(e.target.value)}
           onKeyDown={handleKeyDown}
           />
-          <div className={Styles.text_area_button_img}>
           <img src={ButtonImage} className={Styles.text_area_button_img} 
           alt='Enter-Button' onClick={handleClick}
           ref={buttonRef}
           />
-          </div>
         </div>
     </div>
   )

@@ -34,7 +34,7 @@ const Popup = ({list,setList,setDisplayPopup}) => {
         />
       </div>
       <div className={Styles.choices}>
-        <div className={Styles.subHeading}>Choose Colour</div>
+        <div className={Styles.subHeadingOne}>Choose Colour</div>
         {COLOR_CHOICES.map((item,idx)=>
         <div className={Styles.colorDiv} 
         style={{backgroundColor:item.color,

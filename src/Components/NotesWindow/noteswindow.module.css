@@ -53,10 +53,11 @@
     font-size: 1.4rem;
     font-family: "Roboto";
 }
+
 .text_area_button_img{
-position: fixed;
-bottom: 3.8rem;
-right: 2rem;
+position: relative;
+right: 4%;
+top: 25%;
 }
 .text_area_button_img:hover{
     cursor: pointer;

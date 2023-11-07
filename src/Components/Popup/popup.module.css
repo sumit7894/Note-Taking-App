@@ -14,7 +14,11 @@
 .subHeading{
     font-weight: 600;
     font-size: 1.8rem;
-    margin-right: 4%;
+}
+.subHeadingOne{
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-right: 1%;
 }
 .name{
     margin-left: 10%;
@@ -28,6 +32,7 @@ input{
     border-radius: 22px;
     padding: 12px;
     border: solid 3px #CCCCCC;
+    margin-left: 4%;
 }
 input::placeholder{
     color:#CCCCCC;
@@ -78,3 +83,28 @@ input::placeholder{
         margin-left: 5%;
     }
   }
+
+  @media (max-width: 600px) {
+    .popup {
+        width: 90%;
+        left: 5%;
+        font-size: 0.8rem;
+        height: 27%;
+    }
+    input{
+        width: 50%;
+    }
+    .choices{
+        margin-left: 5%;
+        margin-right: 0%;
+    }
+    .colorDiv{
+        margin-left: 1%;
+        height: 2.2rem;
+        width: 2.2rem;
+    }
+    .name{
+        margin-left: 5%;
+    }
+  }
+  
