@@ -45,13 +45,9 @@ const Homepage = () => {
         setShowWindow(true);
       }
     }
-    // if(backButton){
-    //   setShowSideBar(true);
-    //   setShowWindow(false);
-    // }
-    console.log(backButton);
   },[selected,isMobileView])
   useEffect(() => {
+    handleResize();
     const storedData = localStorage.getItem("pocket_notes");
     if(storedData){
       setList(JSON.parse(storedData));

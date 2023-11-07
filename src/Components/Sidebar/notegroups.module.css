@@ -13,8 +13,8 @@
     cursor: pointer;
 }
 .noteIcon{
-    height: 9vh;
-    width: 4.5vw;
+    height: 4.5rem;
+    width: 4.5rem;
     border-radius: 50%;
     margin-left: 12%;
     margin-right: 5%;
