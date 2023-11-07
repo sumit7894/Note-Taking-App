@@ -26,15 +26,15 @@ const Popup = ({list,setList,setDisplayPopup}) => {
     }
   return (
     <div className={Styles.popup}>
-      <div className={Styles.heading}><h1>Create New Notes Group</h1></div>
+      <div className={Styles.heading}>Create New Notes Group</div>
       <div className={Styles.name}>
-        <div className={Styles.subHeading}>Group Name</div>
+        <div className={Styles.subHeadingOne}>Group Name</div>
         <input type='text' placeholder='Enter your group name...'
         value={groupName} onChange={(e)=>setGroupName(e.target.value)}
         />
       </div>
       <div className={Styles.choices}>
-        <div className={Styles.subHeadingOne}>Choose Colour</div>
+        <div className={Styles.subHeadingTwo}>Choose Colour</div>
         {COLOR_CHOICES.map((item,idx)=>
         <div className={Styles.colorDiv} 
         style={{backgroundColor:item.color,
