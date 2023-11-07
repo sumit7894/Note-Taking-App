@@ -5,7 +5,7 @@
 }
 .title_bar{
     background-color: #E8E8E8;
-    height: 15%;
+    height: 12%;
     display: flex;
     align-items: center;
 }
@@ -27,7 +27,7 @@
     font-weight: 550;
 }
 .notes_date_time_content{
-    height: 57%;
+    height: 59%;
     background-color: #F7ECDC;
     overflow-y: auto;
     color:#353535;
@@ -66,3 +66,4 @@ right: 2rem;
       width: 100%;
     }
   }
+

@@ -1,7 +1,8 @@
 import React from 'react'
 import Styles from './sidebar.module.css';
 import NoteGroups from './NoteGroups';
-const Sidebar = ({list,setList,selected,setSelected,setDisplayPopup,isMobileView,setShowSideBar}) => {
+const Sidebar = ({list,setList,selected,setSelected,setDisplayPopup,
+  isMobileView,setShowSideBar,setShowWindow,setShowDefaultWindow,updateSelected}) => {
   return (
     <div className={Styles.sidebar}>
       <div className={Styles.heading}>
@@ -14,7 +15,8 @@ const Sidebar = ({list,setList,selected,setSelected,setDisplayPopup,isMobileView
         </div>
         {list.map((item,idx)=>
         <NoteGroups selected={selected} setSelected={setSelected} item={item} idx={idx} key={idx}
-        isMobileView={isMobileView} setShowSideBar={setShowSideBar}
+        isMobileView={isMobileView} setShowSideBar={setShowSideBar} setShowWindow={setShowWindow}
+        setShowDefaultWindow={setShowDefaultWindow} updateSelected={updateSelected}
         /> 
         )}
     </div>

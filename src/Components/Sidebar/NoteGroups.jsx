@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Styles from "./notegroups.module.css"
-const NoteGroups = ({selected,setSelected,item,idx,isMobileView,setShowSideBar}) => {
-  const handleClick=(idx)=>{
+const NoteGroups = ({selected,setSelected,item,idx,isMobileView,setShowSideBar,setShowWindow,setShowDefaultWindow,updateSelected}) => {
+
+const handleClick=(idx)=>{
     setSelected(idx);
-    isMobileView ? setShowSideBar(false) : setShowSideBar(true);
-    
+    updateSelected(idx);
   }
   return (
   <div className={Styles.listContainer} onClick={()=>handleClick(idx)} 

@@ -1,10 +1,12 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Styles from "./noteswindow.module.css"
 import ButtonImage from "../../Utils/assests/text-area-button.svg"
 import NoteList from './NoteList'
-const NotesWindow = ({list,setList,selected}) => {
+import ARROW from "../../Utils/assests/back_arrow.png"
+const NotesWindow = ({list,setList,setSelected,selected,setShowSideBar,setShowWindow,isMobileView,setBackButton}) => {
   const [newContent, setNewContent] = useState();
   const buttonRef = useRef(null);
+  
   const getCurrentDate =()=>{
     const getDate = new Date();
     const options = {
@@ -56,14 +58,21 @@ const NotesWindow = ({list,setList,selected}) => {
       setNewContent("");
     }
   }
+  const handleBackButton=()=>{
+    setShowWindow(false);
+    setShowSideBar(true);
+  }
   return (
     <div className={Styles.window}>
         <div className={Styles.title_bar}>
+          {isMobileView && (<div style={{marginLeft:"1rem"}} onClick={handleBackButton}>
+            <img src={ARROW} style={{width:"2rem"}}/>
+            </div>)}
           <div className={Styles.group_icon} style={{backgroundColor:list[selected].color}}>
             {list[selected].abbreviation}
           </div>
           <div className={Styles.group_title}>
-            {list[selected].title}
+            {list[selected].title} 
           </div>
         </div>
         <div className={Styles.notes_date_time_content}>
