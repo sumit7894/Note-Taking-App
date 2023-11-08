@@ -3,6 +3,7 @@
     width: 25%;
     background-color: white;
     font-family: "Roboto";
+    overflow-y: auto;
 }
 .heading{
     font-family: "Roboto";

@@ -45,6 +45,7 @@
     align-items: center;
 }
 .text_area{
+    margin-left: 3%;
     height: 73%;
     width: 94%;
     border-radius: 10px;
@@ -56,7 +57,7 @@
 
 .text_area_button_img{
 position: relative;
-right: 9%;
+right: 7vh;
 top: 25%;
 }
 .text_area_button_img:hover{
